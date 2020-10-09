@@ -1,0 +1,9 @@
+<%= form_for(@post) do |f| %>
+<% f.label :image %>
+<%= f.file_field :image %><br>
+<% f.label :caption %>
+<%= f.text_field :caption, :placeholder => "Add a caption"%>
+<%= f.submit %><br>
+<%= link_to "Delete post", post_path(@post), method: :delete, data: {confirm: "Do you really want to delete it?"}%><br>
+<%= link_to "cancel", posts_path %>
+<% end %>

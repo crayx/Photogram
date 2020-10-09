@@ -1,0 +1,5 @@
+<h1> View the seperate post below </h1>
+<%= link_to "cancel", posts_path%><br>
+<div> Caption: <%= @post.caption %><br></div>
+<%= image_tag(@post.image.url(:medium)) %><br>
+<%= link_to "Edit this post", edit_post_path(@post)%>

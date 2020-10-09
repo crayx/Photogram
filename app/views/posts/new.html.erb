@@ -1,0 +1,7 @@
+<%= form_for(@post) do |f| %>
+<% f.label :image %>
+<%= f.file_field :image %><br>
+<% f.label :caption %>
+<%= f.text_field :caption, :placeholder => "Add a caption"%>
+<%= f.submit %>
+<% end %>
