@@ -1,7 +1,7 @@
 <h1>Photogram</h1>
 <div style="padding: 10px;">
 <div style="padding: 10px;"><%= link_to " Create a New Post", new_post_path %></div>
-<%= @posts.each do |p| %>
+<% @posts.all.each do |p| %>
 <div style="padding: 10px; display:flex;">Caption: <%= p.caption %> </div>
 <div style="padding: 10px;"><%= link_to image_tag(p.image.url(:medium)), post_path(p) %> </div>
 <div style="padding: 10px;"> <%= link_to "Show this post",post_path(p) %></div> 
